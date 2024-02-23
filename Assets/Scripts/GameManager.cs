@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         isGameOver = true;
         gameOverText.text = "Game Over!";
