@@ -114,6 +114,17 @@ public class PlayerController : MonoBehaviour
 
             healthScript.DecrementHealth();
         }
+        // change movement direction after boundary hit
+        if (collision.gameObject.CompareTag("Boundary"))
+        {
+            if (isMovingRight)
+            {
+                isMovingRight = false;
+            }
+            else {
+                isMovingRight = true;
+            }
+        }
     }
 
     private void CheckAndDestroyFireballs()
