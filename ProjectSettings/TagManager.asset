@@ -7,6 +7,7 @@ TagManager:
   - Boundary
   - Fireball
   - Heart
+  - HealthPickup
   layers:
   - Default
   - TransparentFX

@@ -47,4 +47,9 @@ public class Health : MonoBehaviour
     {
         health--;
     }
+
+    public void IncrementHealth()
+    {
+        health++;
+    }
 }

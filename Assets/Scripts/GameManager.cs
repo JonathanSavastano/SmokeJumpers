@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public Text gameOverText;
     public Button tryAgainButton; 
 
-    private int fireballCollisions = 0;
+    public int fireballCollisions = 0; // made public so can access in healthPickup.cs
     private int maxFireballCollisions = 3;
     private bool isGameOver = false;
 
@@ -64,6 +64,14 @@ public class GameManager : MonoBehaviour
             {
                 GameOver();
             }
+        }
+    }
+    
+    public void DecrementFireballCollisions()
+    {
+        if (!isGameOver)
+        {
+            fireballCollisions--;
         }
     }
 

@@ -125,6 +125,14 @@ public class PlayerController : MonoBehaviour
                 isMovingRight = true;
             }
         }
+        // decrement fireball hits if collide with health pickup
+        if (collision.gameObject.CompareTag("HealthPickup"))
+        {
+            Destroy (collision.gameObject); // destroy health pickup
+            GameManager.Instance.DecrementFireballCollisions();
+
+            healthScript.IncrementHealth();
+        }
     }
 
     private void CheckAndDestroyFireballs()
