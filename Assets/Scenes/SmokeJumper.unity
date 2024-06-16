@@ -2331,8 +2331,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 3274530632590924322, guid: 552137e0a5acc1745891a90c9f0d19e8, type: 3}
-  spawnRate: 5
+  spawnRate: 3
   spawnRateIncrease: 0.025
+  maxSpawnRate: 1
   maxSpawnDistance: 20
 --- !u!4 &762647274
 Transform:
@@ -2936,6 +2937,53 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87c1c87f5952e61418434c68ff566497, type: 3}
+--- !u!1 &917651188
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 917651190}
+  - component: {fileID: 917651189}
+  m_Layer: 0
+  m_Name: HealthPickupSpawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &917651189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917651188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da9e418d40707e488851472462cd092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickupPrefab: {fileID: 4015968603842182726, guid: b64d7332d9eaa144693268d34b97dc55, type: 3}
+  spawnRate: 50
+  maxSpawnDistance: 20
+--- !u!4 &917651190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917651188}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: -191.4, z: -5.9200416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &931483010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4103,6 +4151,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1282700982}
   m_CullTransparentMesh: 1
+--- !u!1 &1297163905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1297163907}
+  - component: {fileID: 1297163906}
+  m_Layer: 0
+  m_Name: HealthPickupSpawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1297163906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297163905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da9e418d40707e488851472462cd092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickupPrefab: {fileID: 4015968603842182726, guid: b64d7332d9eaa144693268d34b97dc55, type: 3}
+  spawnRate: 50
+  maxSpawnDistance: 20
+--- !u!4 &1297163907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297163905}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: -108.3, z: -5.9200416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1299812764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4133,7 +4228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPickupPrefab: {fileID: 4015968603842182726, guid: b64d7332d9eaa144693268d34b97dc55, type: 3}
-  spawnRate: 100
+  spawnRate: 30
   maxSpawnDistance: 20
 --- !u!4 &1299812766
 Transform:
@@ -4618,6 +4713,53 @@ MonoBehaviour:
   - {fileID: 1205510661}
   fullHeart: {fileID: 21300000, guid: 02031a304c17e03489ea7fd6867a30e0, type: 3}
   emptyHeart: {fileID: 21300000, guid: f6ebab9eae1347c42af96cd8fbc8ec99, type: 3}
+--- !u!1 &1346453721
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1346453723}
+  - component: {fileID: 1346453722}
+  m_Layer: 0
+  m_Name: HealthPickupSpawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1346453722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346453721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0da9e418d40707e488851472462cd092, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthPickupPrefab: {fileID: 4015968603842182726, guid: b64d7332d9eaa144693268d34b97dc55, type: 3}
+  spawnRate: 50
+  maxSpawnDistance: 20
+--- !u!4 &1346453723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346453721}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6, y: -17, z: -5.9200416}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1361488960
 GameObject:
   m_ObjectHideFlags: 0
@@ -6739,7 +6881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthPickupPrefab: {fileID: 4015968603842182726, guid: b64d7332d9eaa144693268d34b97dc55, type: 3}
-  spawnRate: 100
+  spawnRate: 50
   maxSpawnDistance: 20
 --- !u!4 &2053157251
 Transform:
@@ -7024,8 +7166,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireballPrefab: {fileID: 3274530632590924322, guid: 552137e0a5acc1745891a90c9f0d19e8, type: 3}
-  spawnRate: 5
+  spawnRate: 3
   spawnRateIncrease: 0.025
+  maxSpawnRate: 1
   maxSpawnDistance: 20
 --- !u!4 &2089118688
 Transform:
@@ -7410,4 +7553,7 @@ SceneRoots:
   - {fileID: 1528591040}
   - {fileID: 712344615}
   - {fileID: 2053157251}
+  - {fileID: 917651190}
+  - {fileID: 1297163907}
+  - {fileID: 1346453723}
   - {fileID: 1299812766}

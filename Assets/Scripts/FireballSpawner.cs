@@ -6,11 +6,14 @@ public class FireBallSpawn : MonoBehaviour
 {
     public GameObject fireballPrefab;
     public float spawnRate = 2f;
-    public float spawnRateIncrease = 0.1f;
+    public float spawnRateIncrease = 0.08f;
+    public float maxSpawnRate = 5f;
     public float maxSpawnDistance = 20f;
 
     private float nextSpawnTime;
     private Transform playerTransform; // ref to player's transform
+
+    private Rigidbody2D rb;
 
     public void Start()
     {
@@ -27,9 +30,12 @@ public class FireBallSpawn : MonoBehaviour
 
     private void Update()
     {
-        // Increase spawn rate over time
-        spawnRate -= spawnRateIncrease * Time.deltaTime;
-        spawnRate = Mathf.Clamp(spawnRate, 0.1f, 10f);
+        if (spawnRate > maxSpawnRate) 
+        {
+            // Increase spawn rate over time
+            spawnRate -= spawnRateIncrease * Time.deltaTime;
+            spawnRate = Mathf.Clamp(spawnRate, 0.1f, 10f);
+        }
 
         // Spawn fireballs
         if (Time.time > nextSpawnTime && playerTransform != null && Vector3.Distance(transform.position,
@@ -42,6 +48,7 @@ public class FireBallSpawn : MonoBehaviour
 
     void SpawnFireball()
     {
+       
         // Randomly determine the X position within the screen bounds
         float randomX = Random.Range(-8f, 8f);
 
@@ -56,6 +63,7 @@ public class FireBallSpawn : MonoBehaviour
         {
             // Set the velocity directly
             rb.velocity = new Vector2(0f, 10f); // Adjust the speed as needed
-        }       
+        }
+               
     }
 }
