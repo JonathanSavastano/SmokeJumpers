@@ -129,9 +129,13 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("HealthPickup"))
         {
             Destroy (collision.gameObject); // destroy health pickup
-            GameManager.Instance.DecrementFireballCollisions();
 
-            healthScript.IncrementHealth();
+            if (healthScript.health < 3)
+            {
+                GameManager.Instance.DecrementFireballCollisions();
+                healthScript.IncrementHealth();
+            }
+            
         }
     }
 

@@ -2333,7 +2333,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 3274530632590924322, guid: 552137e0a5acc1745891a90c9f0d19e8, type: 3}
   spawnRate: 3
   spawnRateIncrease: 0.025
-  maxSpawnRate: 1
+  maxSpawnRate: 0.99
   maxSpawnDistance: 20
 --- !u!4 &762647274
 Transform:
@@ -7168,7 +7168,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 3274530632590924322, guid: 552137e0a5acc1745891a90c9f0d19e8, type: 3}
   spawnRate: 3
   spawnRateIncrease: 0.025
-  maxSpawnRate: 1
+  maxSpawnRate: 0.99
   maxSpawnDistance: 20
 --- !u!4 &2089118688
 Transform:
